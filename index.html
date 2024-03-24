@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polling App</title>
+
+    <script src="index.js" defer></script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      form {
+        background-color: #180303;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .btn {
+        background-color: #06376c;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      form {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      button {
+        padding: 8px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Party Registration</h2>
+      <form id="partyRegistration">
+        <div class="form-group">
+          <label for="partyName">Party Name:</label>
+          <input style="font-style:italic ;" placeholder="Enter Party Name..."
+            type="text"
+            class="form-control"
+            id="partyName"
+            name="partyName"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="partyID">Party ID:</label>
+          <input 
+            type="text"
+            class="form-control"
+            id="partyID"
+            name="partyID"
+            placeholder="Party ID.." style="font-style:italic ;"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="partyImage">Party Image:</label>
+          <input
+            type="url"
+            class="form-control"
+            id="partyImage"
+            name="partyImage"
+            accept="image/*"
+            placeholder="Party Image URL..." style="font-style:italic ;"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="date">Registered On:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <h2>Polling Form</h2>
+      <form id="pollingForm">
+        <div class="form-group">
+          <label for="pollingPartyName">Party Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="pollingPartyName"
+            name="pollingPartyName"
+            placeholder=" Enter Party Name..." style="font-style:italic ;"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="EVId">EVId:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="EVId"
+            name="EVId"
+            placeholder="Enter EVId..." style="font-style:italic ;"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="votingId">Voting ID:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="votingId"
+            name="votingId"
+            placeholder="Enter Your VoteID..." style="font-style:italic ;"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="date">Polled On:</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div id="pollingTable">
+     
+    </div>
+  </body>
+</html>
