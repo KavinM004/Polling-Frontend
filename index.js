@@ -1,5 +1,5 @@
 const partDataList = async () => {
-  const response = await fetch("http://localhost:5000/api/party", {
+  const response = await fetch("https://polling-backend-y7z7.onrender.com/api/party", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -37,7 +37,7 @@ document
       partyImage,
     };
 
-    fetch("http://localhost:5000/api/party", {
+    fetch("https://polling-backend-y7z7.onrender.com/api/party", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ document
       votingId,
     };
 
-    fetch("http://localhost:5000/api/polling", {
+    fetch("https://polling-backend-y7z7.onrender.com/api/polling", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
